@@ -41,7 +41,9 @@ class Locators:
 
     MODAL_OVERLAY = (By.CSS_SELECTOR, "div[class^='Modal_modal_overlay']")
 
-
+    FIRST_ORDER_NUMBER_IN_FEED = (
+        By.CSS_SELECTOR, "ul.OrderFeed_list__OLh59 li:first-child p.text_type_digits-default"
+    )
 
 
 

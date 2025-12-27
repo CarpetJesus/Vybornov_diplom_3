@@ -7,6 +7,7 @@ class MainPage(BasePage):
 
     @allure.step("Переход на страницу конструктора")
     def go_to_constructor(self):
+        self.find_element(Locators.CONSTRUCTOR_BUTTON)
         self.click(Locators.CONSTRUCTOR_BUTTON)
         self.wait_for_url(main_site)
 

@@ -4,7 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from seletools.actions import drag_and_drop as seletools_drag_and_drop
 
 class BasePage:
-    def __init__(self, driver, timeout=30):
+    def __init__(self, driver, timeout=40):
         self.driver = driver
         self.wait = WebDriverWait(driver, timeout)
 
