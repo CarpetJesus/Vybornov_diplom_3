@@ -4,7 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from seletools.actions import drag_and_drop as seletools_drag_and_drop
 
 class BasePage:
-    def __init__(self, driver, timeout=10):
+    def __init__(self, driver, timeout=30):
         self.driver = driver
         self.wait = WebDriverWait(driver, timeout)
 
@@ -27,6 +27,7 @@ class BasePage:
         self.wait.until(EC.element_to_be_clickable(locator)).click()
 
     def get_text(self, locator):
+        self.wait.until(EC.visibility_of_element_located(locator))
         return self.find_element(locator).text
 
     def is_visible(self, locator):

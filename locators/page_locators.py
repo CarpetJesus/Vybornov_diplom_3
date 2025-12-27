@@ -35,9 +35,11 @@ class Locators:
     ORDER_TOTAL_COUNT = (By.XPATH, "//p[text()='Выполнено за все время:']/following-sibling::p")
     ORDER_TODAY_COUNT = (By.XPATH, ".//p[text()='Выполнено за сегодня:']/following-sibling::p")
     ORDER_IN_WORK = (
-        By.XPATH, "//ul[contains(@class, 'orderListReady')]//li[contains(@class, 'text')][position()=1]"
+        By.XPATH, "//ul[contains(@class, 'orderListReady')]//li[contains(@class, 'text')]"
     )
     FIRST_ORDER_IN_LIST = (By.CSS_SELECTOR, ".OrderHistory_listItem")
+
+    MODAL_OVERLAY = (By.CSS_SELECTOR, "div[class^='Modal_modal_overlay']")
 
 
 
