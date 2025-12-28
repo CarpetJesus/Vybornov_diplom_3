@@ -8,6 +8,12 @@ class BasePage:
         self.driver = driver
         self.wait = WebDriverWait(driver, timeout)
 
+    def get_current_url(self):
+        return self.driver.current_url
+
+    def is_current_url(self, expected_url):
+        return self.driver.current_url == expected_url
+
     def open_page(self, url):
         self.driver.get(url)
 

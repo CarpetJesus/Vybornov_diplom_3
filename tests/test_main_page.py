@@ -14,7 +14,7 @@ class TestMainPage:
 
         burger_text = page.get_constructor_text()
 
-        assert driver.current_url == main_site
+        assert page.is_current_url(main_site)
         assert burger_text == "Соберите бургер"
 
     @allure.title("Переход по клику на ленту заказов")
@@ -25,7 +25,7 @@ class TestMainPage:
 
         page.go_to_order_feed()
 
-        assert driver.current_url == order_feed
+        assert page.is_current_url(order_feed)
 
     @allure.title("Открытие окна ингредиента с деталями")
     def test_open_ingredient_details(self, driver):

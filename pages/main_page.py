@@ -7,7 +7,7 @@ class MainPage(BasePage):
 
     @allure.step("Переход на страницу конструктора")
     def go_to_constructor(self):
-        self.find_element(Locators.CONSTRUCTOR_BUTTON)
+        self.wait_for_invisible(Locators.MODAL_OVERLAY)
         self.click(Locators.CONSTRUCTOR_BUTTON)
         self.wait_for_url(main_site)
 
@@ -15,6 +15,7 @@ class MainPage(BasePage):
     def go_to_order_feed(self):
         self.click(Locators.ORDER_FEED_BUTTON)
         self.wait_for_url_contains("/feed")
+
 
     @allure.step("Закрытие окна подтверждения заказа")
     def close_confirm_window(self):

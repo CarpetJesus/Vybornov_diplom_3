@@ -45,8 +45,3 @@ class Locators:
         By.CSS_SELECTOR, "ul.OrderFeed_list__OLh59 li:first-child p.text_type_digits-default"
     )
 
-
-
-
-
-
