@@ -1,0 +1,5 @@
+main_site = 'https://stellarburgers.education-services.ru/'
+login_site = f'{main_site}login'
+reg_site = f'{main_site}register'
+account_site = f'{main_site}account/profile'
+order_feed = f'{main_site}feed'

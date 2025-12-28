@@ -1,0 +1,5 @@
+pytest
+selenium
+allure-pytest
+webdriver-manager
+seletools==1.5.0
